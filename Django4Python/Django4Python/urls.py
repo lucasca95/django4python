@@ -16,9 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
+#El include() vincula al archivo de configuracion de rutas de una app con el archivo de rutas 
+#  general del proyecto
 urlpatterns = [
-    path('polls/', include('polls.urls')),          #El include() vincula al archivo de configuracion 
-                                                    #  de rutas de una app con el archivo de rutas 
-                                                    #  general del proyecto
+    path('polls/', include('polls.urls')),
     path('admin/', admin.site.urls),
 ]
