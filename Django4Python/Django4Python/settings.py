@@ -70,7 +70,8 @@ TEMPLATES = [
 WSGI_APPLICATION = 'Django4Python.wsgi.application'
 
 
-# Database
+# BASE DE DATOS!
+# Por default se usa SQLite
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DATABASES = {
