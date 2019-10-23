@@ -29,8 +29,9 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-
+# Se agregan las aplicaciones definidas por uno
 INSTALLED_APPS = [
+    'polls.apps.PollsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -70,7 +71,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'Django4Python.wsgi.application'
 
 
-# Database
+# BASE DE DATOS
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DATABASES = {

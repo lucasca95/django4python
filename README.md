@@ -36,3 +36,22 @@ nombre_de_la_app/
 Se recomienda tener un archivo de configuracion de rutas dentro de cada app, por lo que para crearla corremos
     touch urls.py
 Es importante asociar en nombre_del_proyecto/urls.py al arhivo de rutas dentro de la app.
+
+En nombre_de_la_app/models.py se guardan los modelos de la app.
+    Se escriben en Python. Los constructores reciben como argumento "models.Model"
+    Para referenciar a la base de datos usamos los tipos de datos que vienene en el módulo "models":
+    - models.CharFiels(max_length=xxx)
+    - models.DateTimeField('xxx')
+    - models.IntegerFiled(default=xxx)
+    - models.ForeignKey("Clase", on_delete=models.TipoDeAcción)
+
+Para poder hacer administrable la aplicación debemos modificar el archivo
+    nombre_de_la_app/admin.py
+
+------------------------------- Uso de la shell ---------------------------------------
+Se abre con 
+    python3 manage.py shell
+Las consultas se hacen escribiendo el nombre de la tabla con mayúscula. Algunos ejemplos:
+    Tabla1.objects.all()                            --Trae todo
+    Tabla1.objects.filter(id=xxx)                   --Trae elemento con id "xxx"
+    Tabla1.objects.filter(campo1__startswith='xxx') --Trae los elementos cuyo atributo "campo1" empiece con "xxx"
